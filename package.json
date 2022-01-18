@@ -1,5 +1,20 @@
 {
-  "dependencies": {
-    "three": "^0.136.0"
-  }
+  "name": "spacetogram",
+  "version": "1.0.0",
+  "description": "Stay tuned for the live site! Coming very soon...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qingyuan-wu/Spacetogram.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qingyuan-wu/Spacetogram/issues"
+  },
+  "homepage": "https://github.com/qingyuan-wu/Spacetogram#readme"
 }
