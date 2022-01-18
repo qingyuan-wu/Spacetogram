@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/qingyuan-wu/Spacetogram/issues"
   },
-  "homepage": "https://github.com/qingyuan-wu/Spacetogram#readme"
+  "homepage": "https://github.com/qingyuan-wu/Spacetogram#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
 }
