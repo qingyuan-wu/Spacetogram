@@ -20,6 +20,9 @@ body {
     /* overflow: hidden; */
 }
 /*title*/
+#title {
+    margin-top:5px;
+}
 #title, #intro {
     margin-left:10px;
 }
@@ -57,11 +60,14 @@ div {
     width:500px;
     margin-top:20px;
     background-image:linear-gradient(to bottom right,rgb(63, 63, 59), rgb(95, 95, 78));
+    border-radius:7px;
 }
 
 .image-title, .image-date {
     margin-bottom:0;
-    margin-left:3px;
+    padding-left:3px;
+    background-color:rgb(34, 34, 31);
+    padding-bottom:5px;
 }
 .image-title {
     font-size:110%;
@@ -77,11 +83,14 @@ img {
     margin-right:auto;
     margin-bottom:0px; 
 
-    cursor:pointer;
+    border:2px solid darkblue;
+    border-radius:8px;
+    
 }
 .image-description {
     width:100%;
     border:2px solid darkblue;
+    border-radius:5px;
     padding:10px;
     height:200px;
     overflow:auto; /*scroll bars*/
