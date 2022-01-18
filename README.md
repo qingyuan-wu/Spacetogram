@@ -2,12 +2,13 @@
 
 Visit the live site at https://spacetogram.herokuapp.com/index.html 
 
-## :star: Features
+## :star: Features and Components
 * Unlimited supply of picture of the day posts, just click load more!
-* Search for a specific date with ease! Embedded calendar for date selection
+* Search for a specific date with ease! Includes a calendar for date selection
 * Handcrafted "like" animation - minimal but thoughful
 * Cool `Three.js` intro background
 * Fully responsive design for the best mobile experience!
+* Animate loading state "spinner"
 
 ## :books: Libraries Used
 * [Bootstrap 5](https://getbootstrap.com/) for the Navbar
