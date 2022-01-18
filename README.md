@@ -10,6 +10,7 @@ Visit the live site at https://spacetogram.herokuapp.com/index.html
 * Cool `Three.js` intro background
 * Fully responsive design for the best mobile experience!
 * Animate loading state "spinner"
+* Double click to like a post!
 
 ## :books: Libraries Used
 * [Bootstrap 5](https://getbootstrap.com/) for the Navbar

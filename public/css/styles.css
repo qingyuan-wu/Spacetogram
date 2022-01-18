@@ -1,3 +1,12 @@
+/*Font: Vollkron (Google fonts)*/
+/* @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Oxygen:wght@300;400;700&family=Vollkorn:wght@400;500&display=swap'); */
+/*Dancing Script (Spacetogram logo)*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=The+Nautigal:wght@700&display=swap');
+/*Mochiy Pop P One - title*/
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+/*Font: Lora (Google fonts)*/
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Oxygen:wght@300;400;700&family=Vollkorn:wght@400;500&display=swap');
+
 * {
     box-sizing:border-box;
     scroll-behavior:smooth;
@@ -7,8 +16,19 @@ html {
     overflow-x:hidden;
 }
 /*navbar*/
+.navbar-brand {
+    font-family: 'Dancing Script', cursive;
+    padding-left:10px;
+    margin-top:-10px;
+}
 nav.navbar {
     padding-left:5px;
+    margin-bottom:0;
+    padding-bottom:5px;
+}
+li.nav-item {
+    margin-right:0;
+    float:right;
 }
 /*help collapsable*/
 #help li{
@@ -29,6 +49,10 @@ body {
 }
 #title, #intro {
     margin-left:10px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+#intro {
+    font-size:80%;
 }
 
 canvas{
@@ -48,12 +72,6 @@ hr { /*above and below images*/
 #intro {
     margin-bottom:15px;
 }
-
-/*Font: Vollkron (Google fonts)*/
-/* @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Oxygen:wght@300;400;700&family=Vollkorn:wght@400;500&display=swap'); */
-
-/*Font: Lora (Google fonts)*/
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Oxygen:wght@300;400;700&family=Vollkorn:wght@400;500&display=swap');
 
 div {
     line-height:98%;
