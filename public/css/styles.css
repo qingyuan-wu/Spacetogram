@@ -81,6 +81,7 @@ img {
     height:400px;
     width:100%;
     object-fit:cover;
+    cursor:pointer;
     
     display:block;
     margin-left:auto;
@@ -173,7 +174,7 @@ img {
 #loading.display {
     visibility: visible;
     margin-top:100px;
-    margin-left:38%;
+    margin-left:43%;
 }
 @keyframes spin {
     from {

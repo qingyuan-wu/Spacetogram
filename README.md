@@ -3,6 +3,7 @@
 Visit the live site at https://spacetogram.herokuapp.com/index.html 
 
 ## :star: Features and Components
+* Made with plain HTML/CSS/JavaScript (with some standard libraries)
 * Unlimited supply of picture of the day posts, just click load more!
 * Search for a specific date with ease! Includes a calendar for date selection
 * Handcrafted "like" animation - minimal but thoughful

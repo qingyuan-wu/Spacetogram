@@ -64,7 +64,7 @@ const displayImage = async (cur_date, N) => {
                     <h3 class='image-title'>${json.title}</h3>
                     <section class='image-date'>${json.date}</section>
                     
-                    <img src=${json.url} alt=${json.title}>
+                    <div ondblclick="like('${likeSelector}', '${json}')"><img src=${json.url} alt=${json.title}></div>
                     
                     <div class="like-container like-button" onclick="like('${likeSelector}', '${json}')">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi bi-heart heart" viewBox="-1 -2 18 18">
