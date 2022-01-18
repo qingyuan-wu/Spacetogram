@@ -1,0 +1,181 @@
+* {
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    color: white;
+}
+html {
+    overflow-x:hidden;
+}
+/*help collapsable*/
+#help li{
+    color:white;
+}
+#help div {
+    margin-bottom:10px;
+}
+
+body {
+    margin:0;
+    background: black;
+    /* overflow: hidden; */
+}
+/*title*/
+#title, #intro {
+    margin-left:10px;
+}
+
+canvas{
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:-1;
+}
+
+hr { /*above and below images*/
+    clear:all;
+    border-top:1px solid darkblue;
+    color: darkblue;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+#intro {
+    margin-bottom:15px;
+}
+
+/*Font: Vollkron (Google fonts)*/
+/* @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Oxygen:wght@300;400;700&family=Vollkorn:wght@400;500&display=swap'); */
+
+/*Font: Lora (Google fonts)*/
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Oxygen:wght@300;400;700&family=Vollkorn:wght@400;500&display=swap');
+
+div {
+    line-height:98%;
+}
+
+.image-container {
+    margin-left:25%;
+    width:500px;
+    margin-top:20px;
+    background-image:linear-gradient(to bottom right,rgb(63, 63, 59), rgb(95, 95, 78));
+}
+
+.image-title, .image-date {
+    margin-bottom:0;
+    margin-left:3px;
+}
+.image-title {
+    font-size:110%;
+}
+
+img {
+    height:300px;
+    width:100%;
+    object-fit:cover;
+    
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:0px; 
+
+    cursor:pointer;
+}
+.image-description {
+    width:100%;
+    border:2px solid darkblue;
+    padding:10px;
+    height:200px;
+    overflow:auto; /*scroll bars*/
+}
+
+@media (min-width:667px) and (max-width:992px) {
+    .image-container {
+        margin:auto;
+    }
+}
+
+@media (max-width:666px) {
+    .image-container {
+        margin:auto;
+        width:95%;
+    }
+    .image-description {
+        width:100%;
+    }  
+}
+
+/*like button*/
+.heart {
+    float:left;
+    margin-left:10%;
+    margin-bottom:5px;
+    fill:white;
+}
+.heart:hover {
+    cursor:pointer;
+    fill:rgb(243, 233, 233);
+}
+.like-container {
+    width:32px;
+}
+.heart path {
+    stroke:red;
+}
+/*animate the button!*/
+.liked {
+    animation-name:liking;
+    animation-duration:0.3s;
+    fill:red;
+}
+.liked:hover {
+    fill:rgb(250, 79, 107);
+}
+@keyframes liking {
+    0% {fill:white;}
+    50% {fill:pink; width:150%;transform:rotate(15deg);}
+    75% {fill:hotpink;width:125%;transform:rotate(-10deg);}
+    100% {fill:red; width:100%;}
+}
+
+#link {
+    float:left;
+    margin-left:10px;
+}
+/*Loading*/
+#loading {
+    margin-top:30px;
+    font-size: 300%;
+    width: 3rem;
+    height: 3rem;
+    /*75% purple, 25% white rolling*/
+    border: 6px solid #9c41f2;
+    border-top: 5px solid #f3f3f3;
+    margin-left:35%;
+    margin-bottom:50px;
+    border-radius: 100%;
+    
+    visibility: hidden;
+    animation: spin 1s infinite linear;
+}
+
+#loading.display {
+    visibility: visible;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#loading-text {
+    margin-left:30%;
+    margin-top:20px;
+    margin-bottom:30px;
+}
+
+#load-more {
+    margin-bottom:30px;
+    margin-left:25%;
+}

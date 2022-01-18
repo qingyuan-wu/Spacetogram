@@ -1,0 +1,4 @@
+/*target the like button*/
+.heart, .heart:hover {
+    fill:red;
+}
