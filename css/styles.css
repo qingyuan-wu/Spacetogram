@@ -151,7 +151,7 @@ img {
 }
 /*Loading*/
 #loading {
-    margin-top:30px;
+    margin-top:0;
     font-size: 300%;
     width: 3rem;
     height: 3rem;
@@ -168,6 +168,8 @@ img {
 
 #loading.display {
     visibility: visible;
+    margin-top:100px;
+    margin-left:38%;
 }
 @keyframes spin {
     from {
@@ -187,4 +189,10 @@ img {
 #load-more {
     margin-bottom:30px;
     margin-left:25%;
+}
+
+@media (max-width:666px) {
+    #load-more {
+        margin-left:30%;
+    }
 }
