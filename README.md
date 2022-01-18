@@ -2,7 +2,7 @@
 
 Visit the live site at https://spacetogram.herokuapp.com/index.html 
 
-![](images/site-main-page.png)
+![](site-main-page.png)
 ## :star: Features and Components
 * Made with plain HTML/CSS/JavaScript (with some standard libraries)
 * Unlimited supply of picture of the day posts, just click load more!
