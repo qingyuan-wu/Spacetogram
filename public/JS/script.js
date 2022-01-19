@@ -1,8 +1,6 @@
 //main script for index.html
 
 const API_KEY = "jkwwk3jTUN2cesCuLXwxnZUTu2uHYkOetvm5Gdnc";
-// PS: email used is qingyuan.bot0@gmail.com
-
 const N = 5; //number of images to get
 //get current date as a string in format "yyyy-mm-dd"
 const d = new Date();
