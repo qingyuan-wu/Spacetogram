@@ -48,6 +48,7 @@ const postImage = async (date) => {
     if (json.media_type === "image") {            
         // must put a space for selector!
         const likeSelector = `#d${date} .heart`;
+        const expandSelector = `#d${date} .expand-button`;
         const linkURL = `search.html?date=${date}`;
         $('#picture-container').append(`
 
@@ -70,6 +71,10 @@ const postImage = async (date) => {
                 </svg>
             </a>
             <p class='image-description'>${json.explanation}</p>
+
+            <svg xmlns="http://www.w3.org/2000/svg" onclick="expand('${expandSelector}')" width="32" height="32" fill="white" class="bi bi-caret-down expand-button" viewBox="0 0 16 16">
+            <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+            </svg>
         </div>
         `);
     } else if (json.media_type === "video"){ //not an image, a video
@@ -96,6 +101,10 @@ const postImage = async (date) => {
                     </svg>
                 </a>
                 <p class='image-description'>${json.explanation}</p>
+
+                <svg xmlns="http://www.w3.org/2000/svg" onclick="expand('${expandSelector}')" width="32" height="32" fill="white" class="bi bi-caret-down expand-button" viewBox="0 0 16 16">
+                <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                </svg>
             </div>
             `);
         }

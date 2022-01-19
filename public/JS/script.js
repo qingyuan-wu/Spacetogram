@@ -57,6 +57,7 @@ const displayImage = async (cur_date, N) => {
             // must put a space for selector!
             const likeSelector = `#d${cur_date} .heart`;
             const linkURL = `search.html?date=${cur_date}`;
+            const expandSelector = `#d${cur_date} .expand-button`;
             $('#content-container').append(`
                 <div class='image-container' id='d${cur_date}'>
                     <h3 class='image-title'>${json.title}</h3>
@@ -76,6 +77,10 @@ const displayImage = async (cur_date, N) => {
                         </svg>
                     </a>
                     <p class='image-description'>${json.explanation}</p>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" onclick="expand('${expandSelector}')" width="32" height="32" fill="currentColor" class="bi bi-caret-down expand-button" viewBox="0 0 16 16">
+  <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+</svg>
                 </div>
             `);
         } else if (json.media_type === "video") {
@@ -102,10 +107,15 @@ const displayImage = async (cur_date, N) => {
                             </svg>
                         </a>
                         <p class='image-description'>${json.explanation}</p>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" onclick="expand('${expandSelector}')" width="32" height="32" fill="currentColor" class="bi bi-caret-down expand-button" viewBox="0 0 16 16">
+  <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                        </svg>
                     </div>
                 `);
             }
         }
+        
         // get the new day (yesterday)
         var nums = cur_date.split("-");
         var year = parseInt(nums[0]);

@@ -112,16 +112,34 @@ img {
 }
 .image-description {
     width:100%;
-    border:2px solid darkblue;
+    margin-bottom:0;
+    /* border:2px solid darkblue; */
     border-radius:5px;
     padding:10px;
-    height:200px;
-    overflow:auto; /*scroll bars*/
+    height:150px;
+    overflow:hidden; /*scroll bars*/
+}
+
+/*expand button*/
+.expand-button {
+    cursor:pointer;
+    margin-left:47%;
+}
+.expand-button:hover {
+    fill:#c7bdbd;
+}
+.expand-button.expanding {
+    transform: rotate(180deg);
+    transition-duration: 0.25s;
+}
+.image-description.expanding {
+    height:auto;
 }
 
 @media (min-width:667px) and (max-width:992px) {
     .image-container {
         margin:auto;
+        margin-bottom:15px;
     }
 }
 
@@ -129,6 +147,8 @@ img {
     .image-container {
         margin:auto;
         width:95%;
+        margin-left:2.5%;
+        margin-bottom:15px;
     }
     .image-description {
         width:100%;
@@ -152,6 +172,7 @@ img {
 .heart path {
     stroke:red;
 }
+
 /*animate the button!*/
 .liked {
     animation-name:liking;
@@ -172,6 +193,7 @@ img {
     float:left;
     margin-left:10px;
 }
+
 /*Loading*/
 #loading {
     margin-top:0;
@@ -188,7 +210,6 @@ img {
     visibility: hidden;
     animation: spin 1s infinite linear;
 }
-
 #loading.display {
     visibility: visible;
     margin-top:100px;
