@@ -51,8 +51,11 @@ body {
     margin-left:10px;
     font-family: 'Mochiy Pop P One', sans-serif;
 }
-#intro {
+#intro, #message {
     font-size:80%;
+}
+#message {
+    margin-left:10px;
 }
 
 canvas{
@@ -70,7 +73,7 @@ hr { /*above and below images*/
     margin-bottom:10px;
 }
 #intro {
-    margin-bottom:15px;
+    margin-bottom:10px;
 }
 
 div {
