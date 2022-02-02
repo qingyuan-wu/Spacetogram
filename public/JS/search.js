@@ -45,11 +45,11 @@ const postImage = async (date) => {
     })
     .then(response => response.json())
     hideLoading();
+    // must put a space for selector!
+    const likeSelector = `#d${date} .heart`;
+    const expandSelector = `#d${date} .expand-button`;
+    const linkURL = `search.html?date=${date}`;
     if (json.media_type === "image") {            
-        // must put a space for selector!
-        const likeSelector = `#d${date} .heart`;
-        const expandSelector = `#d${date} .expand-button`;
-        const linkURL = `search.html?date=${date}`;
         $('#picture-container').append(`
 
 
