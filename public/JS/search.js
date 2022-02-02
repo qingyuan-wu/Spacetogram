@@ -52,7 +52,6 @@ const postImage = async (date) => {
     if (json.media_type === "image") {            
         $('#picture-container').append(`
 
-
             <div class='image-container' id='d${date}'>
             <h3 class='image-title'>${json.title}</h3>
             <section class='image-date'>${json.date}</section>
@@ -80,8 +79,7 @@ const postImage = async (date) => {
     } else if (json.media_type === "video"){ //not an image, a video
         const url = generateThumbnailURL(json.url);
         if (url) {
-            const likeSelector = `#d${date} .heart`;
-            const linkURL = `search.html?date=${date}`;
+
             $('#picture-container').append(`
                 <div class='image-container' id='d${date}'>
                 <h3 class='image-title'>${json.title}</h3>

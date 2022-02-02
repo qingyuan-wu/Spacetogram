@@ -86,15 +86,14 @@ const displayImage = async (cur_date, N) => {
         } else if (json.media_type === "video") {
             const url = generateThumbnailURL(json.url);
             if (url) {
-                const likeSelector = `#d${cur_date} .heart`;
-                const linkURL = `search.html?date=${cur_date}`;
+
                 $('#content-container').append(`
                     <div class='image-container' id='d${cur_date}'>
                         <h3 class='image-title'>${json.title}</h3>
                         <section class='image-date'>${json.date}</section>
-                        <hr/>
-                        <img src=${url} alt=${json.title}>
-                        <hr/>
+                        
+                        <div ondblclick="like('${likeSelector}', '${json}')"><img src=${url} alt=${json.title}></div>
+                        
                         <div class="like-container like-button" onclick="like('${likeSelector}', '${json}')">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi bi-heart heart" viewBox="-1 -2 18 18">
                                 <path d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
