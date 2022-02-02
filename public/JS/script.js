@@ -7,6 +7,7 @@ const d = new Date();
 var m = d.getMonth();
 m++; //need to add 1 to get the valid month
 var cur_date = `${d.getFullYear()}-${m}-${d.getDate()}`;
+console.log(cur_date);
 
 // how many days in each month
 const DAYS = {
@@ -53,11 +54,11 @@ const displayImage = async (cur_date, N) => {
         })
         .then(response => response.json())
         hideLoading();
+        const likeSelector = `#d${cur_date} .heart`;
+        const linkURL = `search.html?date=${cur_date}`;
+        const expandSelector = `#d${cur_date} .expand-button`;
         if (json.media_type === "image") {            
             // must put a space for selector!
-            const likeSelector = `#d${cur_date} .heart`;
-            const linkURL = `search.html?date=${cur_date}`;
-            const expandSelector = `#d${cur_date} .expand-button`;
             $('#content-container').append(`
                 <div class='image-container' id='d${cur_date}'>
                     <h3 class='image-title'>${json.title}</h3>
@@ -107,10 +108,8 @@ const displayImage = async (cur_date, N) => {
                             </svg>
                         </a>
                         <p class='image-description'>${json.explanation}</p>
-
                         <svg xmlns="http://www.w3.org/2000/svg" onclick="expand('${expandSelector}')" width="32" height="32" fill="currentColor" class="bi bi-caret-down expand-button" viewBox="0 0 16 16">
-  <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
-                        </svg>
+                        <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
                     </div>
                 `);
             }
@@ -137,6 +136,7 @@ const displayImage = async (cur_date, N) => {
 
         //update url for the new date: 
         api_url = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${cur_date}`;
+        console.log(api_url);
     }
     //Finished fetching N current posts
     //provide a button to load more posts
