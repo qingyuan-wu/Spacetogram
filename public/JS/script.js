@@ -7,7 +7,6 @@ const d = new Date();
 var m = d.getMonth();
 m++; //need to add 1 to get the valid month
 var cur_date = `${d.getFullYear()}-${m}-${d.getDate()}`;
-console.log(cur_date);
 
 // how many days in each month
 const DAYS = {
@@ -136,7 +135,6 @@ const displayImage = async (cur_date, N) => {
 
         //update url for the new date: 
         api_url = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${cur_date}`;
-        console.log(api_url);
     }
     //Finished fetching N current posts
     //provide a button to load more posts
